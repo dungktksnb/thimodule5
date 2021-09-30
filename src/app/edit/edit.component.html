@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Edit Book</h1>
+
+  <form [formGroup]="bookForm">
+    <div class="form-group">
+      <label>title</label>
+      <input type="text" class="form-control" formControlName="title" >
+    </div>
+    <div class="form-group">
+      <label>author</label>
+      <input type="text" class="form-control" formControlName="author" >
+    </div>
+    <div class="form-group">
+      <label>description</label>
+
+      <input type="text" class="form-control" formControlName="description" >
+    </div>
+
+    <button type="submit" (click)="updateBooks()" class="btn btn-primary">Submit</button>
+  </form>
+</div>

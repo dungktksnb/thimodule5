@@ -1,0 +1,31 @@
+
+<div class="container">
+  <h2>Show Book</h2>
+  <a  type="button" class="btn btn-success" routerLink="/create">Create</a>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th></th>
+      <th>title</th>
+      <th>author</th>
+      <th>description</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let p of books;index as i">
+      <td>{{i +1}}</td>
+      <td>{{p.title}}</td>
+      <td>{{p.author}}</td>
+      <td>{{p.description}}</td>
+
+      <td><button type="button" class="btn btn-warning" [routerLink]="['/edit/', p.id]">Edit</button>
+      </td>
+      <td><button type="button" class="btn btn-danger" [routerLink]="['/delete/', p.id]">Delete</button>
+      </td>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Create Book</h1>
+
+  <form [formGroup]="bookForm">
+    <div class="form-group">
+      <label>title</label>
+      <input type="text" class="form-control" formControlName="title" placeholder="nhập title">
+    </div>
+    <div class="form-group">
+      <label>author</label>
+      <input type="text" class="form-control" formControlName="author" placeholder="nhập author">
+    </div>
+    <div class="form-group">
+      <label>description</label>
+
+      <input type="text" class="form-control" formControlName="description" placeholder="nhập description">
+    </div>
+
+    <button type="submit" (click)="createBook()" class="btn btn-primary">Submit</button>
+  </form>
+</div>
